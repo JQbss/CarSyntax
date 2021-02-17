@@ -1,0 +1,7 @@
+﻿vehicle
+VEHICLE
+car color,yearOfProduction,brand
+tires tyreType
+carInterior carUpholstery
+airbag numberOfAirbags,isExists
+seats numberOfSeats

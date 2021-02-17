@@ -1,0 +1,6 @@
+﻿markup vehicle
+vehicle car,vehicle
+car tires/,carInterior
+carInterior airbag/,seats/
+/carInterior tires/
+/car vehicle
