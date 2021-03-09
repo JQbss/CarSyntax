@@ -55,7 +55,7 @@
     <Compile Include="CarSyntaxChecker.cs" />
     <Compile Include="CarTextViewCreationListener.cs" />
     <Compile Include="icons\Icons.cs" />
-    <Compile Include="keywords\KeyWordsStatment.cs" />
+    <Compile Include="keywords\KeywordsStatment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CarSyntaxPackage.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

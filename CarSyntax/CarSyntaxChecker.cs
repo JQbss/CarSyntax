@@ -83,10 +83,10 @@ namespace CarSyntax
 				ValueFlag = false;
 				CarCompletionSource.SetCompletionList();
 			}
-			else if (KeyWordsStatment.ContainsMarkup(word) && MarkupFlag)
+			else if (KeywordsStatment.ContainsMarkup(word) && MarkupFlag)
 			{
 
-				if (KeyWordsStatment.ContainsMarkupInNestedDictionary(word))
+				if (KeywordsStatment.ContainsMarkupInNestedDictionary(word))
 				{
 					if ((index - word.Length - 1) > 0 && text[index - word.Length - 1].Equals('/'))
 					{
@@ -101,7 +101,7 @@ namespace CarSyntax
 			}
 			else if (AttributeFlag)
 			{
-				if (!keywordName.Equals("markup") && KeyWordsStatment.ContainsAttributeInMarkup(word, keywordName))
+				if (!keywordName.Equals("markup") && KeywordsStatment.ContainsAttributeInMarkup(word, keywordName))
 				{
 					classification = Classifications.NumberLiteral;
 					ValueFlag = true;

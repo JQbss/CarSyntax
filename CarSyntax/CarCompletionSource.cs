@@ -67,9 +67,9 @@ namespace CarSyntax
 			string keywordName = CarSyntaxChecker.GetKeywordName();
 			string highMarkup = CarSyntaxChecker.HighMarkup;
 			string attributeName = CarSyntaxChecker.GetAttributeName();
-			if (KeyWordsStatment.ContainsMarkupInNestedDictionary(highMarkup) && CarSyntaxChecker.MarkupFlag && !CarSyntaxChecker.AttributeFlag)
+			if (KeywordsStatment.ContainsMarkupInNestedDictionary(highMarkup) && CarSyntaxChecker.MarkupFlag && !CarSyntaxChecker.AttributeFlag)
 			{
-				completions = KeyWordsStatment.GetAllNestedMarkups(highMarkup).Select(keyword => new Completion(keyword)).ToList();
+				completions = KeywordsStatment.GetAllNestedMarkups(highMarkup).Select(keyword => new Completion(keyword)).ToList();
 				foreach (var c in completions)
 				{
 					if (c.DisplayText.EndsWith("/") || c.DisplayText.Equals("vehicle"))
@@ -101,9 +101,9 @@ namespace CarSyntax
 			}
 			else if (CarSyntaxChecker.ValueFlag)
 			{
-				if (KeyWordsStatment.values.ContainsKey(attributeName))
+				if (KeywordsStatment.valuesDictionary.ContainsKey(attributeName))
 				{
-					completions = KeyWordsStatment.GetAllValuesByAttruute(attributeName).Select(keyword => new Completion(keyword)).ToList();
+					completions = KeywordsStatment.GetAllValuesByAttruute(attributeName).Select(keyword => new Completion(keyword)).ToList();
 					foreach (var c in completions)
 					{
 						c.InsertionText = c.DisplayText + "\" ";
@@ -117,7 +117,7 @@ namespace CarSyntax
 			}
 			else if (CarSyntaxChecker.AttributeFlag)
 			{
-				completions = KeyWordsStatment.GetAllAttributesByMarkup(keywordName).Select(keyword => new Completion(keyword)).ToList();
+				completions = KeywordsStatment.GetAllAttributesByMarkup(keywordName).Select(keyword => new Completion(keyword)).ToList();
 				foreach (var c in completions)
 				{
 					c.InsertionText = " " + c.DisplayText + "= ";

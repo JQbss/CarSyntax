@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 namespace CarSyntax.keywords
 {
-    public class KeyWordsStatment
+    public class KeywordsStatment
     {
-        internal static Dictionary<string, List<string>> keywordsPairs = ReadKeywordsFromFile.FileToDictionary(Properties.Resources.KeywordsStatment);
-        internal static Dictionary<string, List<string>> values = ReadKeywordsFromFile.FileToDictionary(Properties.Resources.AttributesStatment);
+        internal static Dictionary<string, List<string>> keywordsDictionary = ReadKeywordsFromFile.FileToDictionary(Properties.Resources.KeywordsStatment);
+        internal static Dictionary<string, List<string>> valuesDictionary = ReadKeywordsFromFile.FileToDictionary(Properties.Resources.AttributesStatment);
         internal static Dictionary<string, List<string>> nestingDictionary = ReadKeywordsFromFile.FileToDictionary(Properties.Resources.MarkupNesting);
 
         public static List<string> GetAllMarkups()
         {
             List<string> markups = new List<string>();
-            foreach (var t in keywordsPairs.Keys)
+            foreach (var t in keywordsDictionary.Keys)
             {
                 markups.Add(t);
             }
@@ -25,9 +25,9 @@ namespace CarSyntax.keywords
 
         internal static List<string> GetAllAttributesByMarkup(string markup)
         {
-            if (keywordsPairs.ContainsKey(markup))
+            if (keywordsDictionary.ContainsKey(markup))
             {
-                return keywordsPairs[markup];
+                return keywordsDictionary[markup];
             }
             return new List<string>();
         }
@@ -37,9 +37,9 @@ namespace CarSyntax.keywords
         }
         internal static List<string> GetAllValuesByAttruute(string attribute)
         {
-            if (values.ContainsKey(attribute))
+            if (valuesDictionary.ContainsKey(attribute))
             {
-                return values[attribute];
+                return valuesDictionary[attribute];
             }
             return new List<string>();
         }
