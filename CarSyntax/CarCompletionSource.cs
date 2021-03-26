@@ -103,7 +103,7 @@ namespace CarSyntax
 			{
 				if (KeywordsStatment.valuesDictionary.ContainsKey(attributeName))
 				{
-					completions = KeywordsStatment.GetAllValuesByAttruute(attributeName).Select(keyword => new Completion(keyword)).ToList();
+					completions = KeywordsStatment.GetAllValuesByAttribute(attributeName).Select(keyword => new Completion(keyword)).ToList();
 					foreach (var c in completions)
 					{
 						c.InsertionText = c.DisplayText + "\" ";

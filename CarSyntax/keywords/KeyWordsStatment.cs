@@ -35,7 +35,7 @@ namespace CarSyntax.keywords
         {
             return GetAllAttributesByMarkup(markup).Contains(word);
         }
-        internal static List<string> GetAllValuesByAttruute(string attribute)
+        internal static List<string> GetAllValuesByAttribute(string attribute)
         {
             if (valuesDictionary.ContainsKey(attribute))
             {
